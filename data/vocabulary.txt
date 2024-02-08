@@ -1,0 +1,10 @@
+theme,french,japanese,hiragana,romanji
+localisation,haut,上,うえ,ue
+localisation,bas,下,した,shita
+localisation,gauche,左,ひだり,hidari
+localisation,droite,右,みぎ,migi
+localisation,devant,前,まえ,mae
+localisation,derrière,後ろ,うしろ,ushiro
+localisation,dedans,中,なか,naka
+localisation,dehors,外,そと,soto
+localisation,voisin,隣,となり,tonari

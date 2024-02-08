@@ -1,21 +1,21 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
-# from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
+from vocabulary.word import read_vocabulary
 
 app = FastAPI()
-
-# app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 templates = Jinja2Templates(directory="templates")
 
 
-@app.get("/hello/{name}", response_class=HTMLResponse)
-async def hello(request: Request, name: str):
+@app.get("/vocabulary", response_class=HTMLResponse)
+async def vocabulary(request: Request):
+    words = read_vocabulary()
+    print("DEBUG", words)
     return templates.TemplateResponse(
-        request=request, name="hello-world.html", context={"name": name}
+        request=request, name="vocabulary.html", context={"words": words}
     )
 
 if __name__ == "__main__":

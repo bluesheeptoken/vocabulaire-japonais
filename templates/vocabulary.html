@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>List de vocabulaire</title>
+</head>
+<body>
+    <table>
+        {% for word in words %}
+        <TR>
+           <TD class="c2">{{ word.french }}</TD>
+           <TD class="c3">{{ word.japanese }}</TD>
+           <TD class="c4"><SPAN>{{ word.hiragana }}</SPAN></TD>
+           <TD class="c5"><SPAN>{{ word.romanji }}</SPAN></TD>
+        </TR>
+        {% endfor %}
+    </table>
+</body>
+</html>
