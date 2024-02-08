@@ -13,7 +13,6 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/vocabulary", response_class=HTMLResponse)
 async def vocabulary(request: Request):
     words = read_vocabulary()
-    print("DEBUG", words)
     return templates.TemplateResponse(
         request=request, name="vocabulary.html", context={"words": words}
     )

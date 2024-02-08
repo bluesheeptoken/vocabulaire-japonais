@@ -1,17 +1,27 @@
 <html>
 <head>
     <title>List de vocabulaire</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 </head>
 <body>
-    <table>
-        {% for word in words %}
-        <TR>
-           <TD class="c2">{{ word.french }}</TD>
-           <TD class="c3">{{ word.japanese }}</TD>
-           <TD class="c4"><SPAN>{{ word.hiragana }}</SPAN></TD>
-           <TD class="c5"><SPAN>{{ word.romanji }}</SPAN></TD>
-        </TR>
-        {% endfor %}
-    </table>
+    <h1>Liste de vocabulaire</h1>
+    <figure>
+        <table>
+            <TR>
+                <TH>Français</TH>
+                <TH>日本語</TH>
+                <TH>Hiragana</TH>
+                <TH>Romanji</TH>
+            </TR>
+            {% for word in words %}
+            <TR>
+               <TD class="c2">{{ word.french }}</TD>
+               <TD class="c3">{{ word.japanese }}</TD>
+               <TD class="c4"><SPAN>{{ word.hiragana }}</SPAN></TD>
+               <TD class="c5"><SPAN>{{ word.romanji }}</SPAN></TD>
+            </TR>
+            {% endfor %}
+        </table>
+    </figure>
 </body>
 </html>
