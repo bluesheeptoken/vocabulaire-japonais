@@ -1,10 +1,10 @@
-<html>
-<head>
-    <title>List de vocabulaire</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-</head>
-<body>
-    <h1>Liste de vocabulaire</h1>
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block title %}Vocabulaire - Japonais{% endblock %}
+
+{% block content %}
+    {% if words %}
     <figure>
         <table>
             <TR>
@@ -15,13 +15,21 @@
             </TR>
             {% for word in words %}
             <TR>
-               <TD class="c2">{{ word.french }}</TD>
-               <TD class="c3">{{ word.japanese }}</TD>
-               <TD class="c4"><SPAN>{{ word.hiragana }}</SPAN></TD>
-               <TD class="c5"><SPAN>{{ word.romanji }}</SPAN></TD>
+                <TD>{{ word.french }}</TD>
+                <TD>{{ word.japanese }}</TD>
+                <TD>{{ word.hiragana }}</TD>
+                <TD>{{ word.romanji }}</TD>
             </TR>
             {% endfor %}
         </table>
     </figure>
-</body>
-</html>
+    {% else %}
+    <nav>
+        <ul>
+            {% for category in categories %}
+            <li><a href="/vocabulary/{{ category.name }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Japonais{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+    <header>
+        {% block header %}
+        <h1>Révisions japonais</h1>
+        {% endblock %}
+        {% block nav %}
+        <nav>
+            {% block navigation %}
+            <a href="/">Home</a>
+            <a href="/vocabulary">Vocabulaire</a>
+            {% endblock %}
+        </nav>
+        {% endblock %}
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

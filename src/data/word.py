@@ -3,7 +3,7 @@ import csv
 
 
 class Word(BaseModel):
-    theme: str
+    category: str
     french: str
     japanese: str
     hiragana: str

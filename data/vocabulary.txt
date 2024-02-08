@@ -1,4 +1,4 @@
-theme,french,japanese,hiragana,romanji
+category,french,japanese,hiragana,romanji
 localisation,haut,上,うえ,ue
 localisation,bas,下,した,shita
 localisation,gauche,左,ひだり,hidari
@@ -8,3 +8,13 @@ localisation,derrière,後ろ,うしろ,ushiro
 localisation,dedans,中,なか,naka
 localisation,dehors,外,そと,soto
 localisation,voisin,隣,となり,tonari
+nombre,1,一,いち,ichi
+nombre,2,二,に,ni
+nombre,3,三,さん,san
+nombre,4,四,し/よん,shi/yon
+nombre,5,五,ご,go
+nombre,6,六,ろく,roku
+nombre,7,七,しち/なな,shichi/nana
+nombre,8,八,はち,hachi
+nombre,9,九,きゅ/く,kyu/ku
+nombre,10,十,じゅう,juu
